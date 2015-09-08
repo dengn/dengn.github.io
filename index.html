@@ -8,6 +8,12 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
 
 
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
 
 
 
@@ -16,10 +22,10 @@
 
 
 
-  <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,400italic&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+  <link href='//fonts.googleapis.com/css?family=Lato:300,400,700,400italic&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
 
 
-<link rel="stylesheet" type="text/css" href="/css/main.css?v=0.4.3"/>
+<link rel="stylesheet" type="text/css" href="/css/main.css?v=0.4.5.1"/>
 
 
 
@@ -30,27 +36,32 @@
 
 
 
-  <link rel="shorticon icon" type="image/x-icon" href="/favicon.ico?v=0.4.3" />
+  <link rel="shorticon icon" type="image/x-icon" href="/favicon.ico?v=0.4.5.1" />
 
+
+<meta name="description">
+<meta property="og:type" content="website">
+<meta property="og:title" content="dengn's blog">
+<meta property="og:url" content="http://yoursite.com/index.html">
+<meta property="og:site_name" content="dengn's blog">
+<meta property="og:description">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="dengn's blog">
+<meta name="twitter:description">
 
 
 <script type="text/javascript" id="hexo.configuration">
   var CONFIG = {
     scheme: '',
-    analytics: {
-      google: ''
-    },
     sidebar: 'post'
   };
 </script>
 
-
-
-
   <title> dengn's blog </title>
 </head>
 
-<body>
+<body itemscope itemtype="http://schema.org/WebPage" lang="default">
+
   <!--[if lte IE 8]>
   <div style=' clear: both; height: 59px; padding:0 0 0 15px; position: relative;margin:0 auto;'>
     <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode">
@@ -60,19 +71,21 @@
     </a>
   </div>
 <![endif]-->
+  
+
+
 
   <div class="container one-column 
    page-home 
 ">
     <div class="headband"></div>
 
-    <div id="header" class="header">
-      <div class="header-inner">
-        <h1 class="site-meta">
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><h1 class="site-meta">
   <span class="logo-line-before"><i></i></span>
-  <a href="/" class="brand">
+  <a href="/" class="brand" rel="start">
       <span class="logo">
-        <i class="icon-logo"></i>
+        <i class="icon-next-logo"></i>
       </span>
       <span class="site-title">dengn's blog</span>
   </a>
@@ -87,7 +100,7 @@
   </button>
 </div>
 
-<div class="site-nav">
+<nav class="site-nav">
   
 
   
@@ -95,64 +108,65 @@
       
         
         <li class="menu-item menu-item-home">
-          <a href="/">
-            <i class="menu-item-icon icon-home"></i> <br />
-            首頁
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-archives">
-          <a href="/archives">
-            <i class="menu-item-icon icon-archives"></i> <br />
-            歸檔
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-tags">
-          <a href="/tags">
-            <i class="menu-item-icon icon-tags"></i> <br />
-            標籤
+          <a href="/" rel="section">
+            <i class="menu-item-icon icon-next-home"></i> <br />
+            Home
           </a>
         </li>
       
         
         <li class="menu-item menu-item-about">
-          <a href="/about">
-            <i class="menu-item-icon icon-about"></i> <br />
-            關於
+          <a href="/about" rel="section">
+            <i class="menu-item-icon icon-next-about"></i> <br />
+            About
           </a>
         </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            <i class="menu-item-icon icon-next-archives"></i> <br />
+            Archives
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            <i class="menu-item-icon icon-next-tags"></i> <br />
+            Tags
+          </a>
+        </li>
+      
+
+      
       
     </ul>
   
 
   
-</div>
+</nav>
 
+ </div>
+    </header>
 
-      </div>
-    </div>
-
-    <div id="main" class="main">
+    <main id="main" class="main">
       <div class="main-inner">
-        <div id="content" class="content">
-          
-  <div id="posts" class="posts-expand">
+        <div id="content" class="content"> 
+  <section id="posts" class="posts-expand">
     
       
 
-  <div class="post post-type-normal ">
-    <div class="post-header">
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
 
       
       
-        <h1 class="post-title">
+        <h1 class="post-title" itemprop="name headline">
           
           
             
-              <a class="post-title-link" href="/2015/06/01/Google-IO2015-Brillo-Weave/">
+              <a class="post-title-link" href="/2015/06/01/Google-IO2015-Brillo-Weave/" itemprop="url">
                 Google_IO2015_Brillo_Weave
               </a>
             
@@ -162,14 +176,21 @@
 
       <div class="post-meta">
         <span class="post-time">
-          發表於 2015-06-01
+          Posted on
+          <time itemprop="dateCreated" datetime="2015-06-01T11:33:06+02:00" content="2015-06-01">
+            2015-06-01
+          </time>
         </span>
 
         
-          <span class="post-category">
-            &nbsp; | &nbsp; 分類於
+          <span class="post-category" >
+            &nbsp; | &nbsp; In
             
-              <a href="/categories/业内动态/">业内动态</a>
+              <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                <a href="/categories/业内动态/" itemprop="url" rel="index">
+                  <span itemprop="name">业内动态</span>
+                </a>
+              </span>
 
               
               
@@ -181,15 +202,15 @@
         
           
             <span class="post-comments-count">
-            &nbsp; | &nbsp;
-            <a href="/2015/06/01/Google-IO2015-Brillo-Weave/#comments" >
-              <span class="post-comments-count ds-thread-count" data-thread-key="2015/06/01/Google-IO2015-Brillo-Weave/"></span>
-            </a>
-          </span>
+              &nbsp; | &nbsp;
+              <a href="/2015/06/01/Google-IO2015-Brillo-Weave/#comments" itemprop="discussionUrl">
+                <span class="post-comments-count ds-thread-count" data-thread-key="2015/06/01/Google-IO2015-Brillo-Weave/" itemprop="commentsCount"></span>
+              </a>
+            </span>
           
         
       </div>
-    </div>
+    </header>
 
     <div class="post-body">
 
@@ -198,17 +219,17 @@
 
       
         
-          Google的IOT战略分析
+          <span itemprop="description">Google的IOT战略分析</span>
           <div class="post-more-link text-center">
             <a class="btn" href="/2015/06/01/Google-IO2015-Brillo-Weave/">
-              閱讀全文 &raquo;
+              Read more &raquo;
             </a>
           </div>
-          
+        
       
     </div>
 
-    <div class="post-footer">
+    <footer class="post-footer">
       
 
       
@@ -217,20 +238,105 @@
       
         <div class="post-eof"></div>
       
-    </div>
-  </div>
+    </footer>
+  </article>
 
 
     
-  </div>
+      
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      
+      
+        <h1 class="post-title" itemprop="name headline">
+          
+          
+            
+              <a class="post-title-link" href="/2015/01/08/Service的角色/" itemprop="url">
+                Service的角色
+              </a>
+            
+          
+        </h1>
+      
+
+      <div class="post-meta">
+        <span class="post-time">
+          Posted on
+          <time itemprop="dateCreated" datetime="2015-01-08T22:09:30+01:00" content="2015-01-08">
+            2015-01-08
+          </time>
+        </span>
+
+        
+          <span class="post-category" >
+            &nbsp; | &nbsp; In
+            
+              <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                <a href="/categories/Android/" itemprop="url" rel="index">
+                  <span itemprop="name">Android</span>
+                </a>
+              </span>
+
+              
+              
+
+            
+          </span>
+        
+
+        
+          
+            <span class="post-comments-count">
+              &nbsp; | &nbsp;
+              <a href="/2015/01/08/Service的角色/#comments" itemprop="discussionUrl">
+                <span class="post-comments-count ds-thread-count" data-thread-key="2015/01/08/Service的角色/" itemprop="commentsCount"></span>
+              </a>
+            </span>
+          
+        
+      </div>
+    </header>
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <span itemprop="articleBody"><p>看到一篇关于描述Android里Service起到角色的帖子，感觉说的比较到位，翻译了一下。<br>原文地址：<a href="https://commonsware.com/blog/2014/07/27/role-services.html" target="_blank" rel="external">https://commonsware.com/blog/2014/07/27/role-services.html</a></p>
+<p>直接给出结论：只有在Service真正正在给用户带来价值的时候才使用Service。<br>这句话我说的很多，因为这是我觉得最合适能表达什么时候该用Service的一句话。但是简略的几句话还是没法直观的说清楚这个问题。<br>首先，一个Service对操作系统来说应该像是一个Flag一样简单的是或者否的概念，表面你是否正在给用户带来价值。如果是，那么Android系统需要终止进程（比如内存不够）的时候就应该去寻找其他目标，而不是你的Service所在线程。第二，Service提供了一系列实现了IPC（跨进程通信）的API：一种命令模式（用Intent和startService()），一种绑定模式（用bindService()）。<br>当我们在单个进程内部用这两种通信模式时，主要的目的是就是为了让系统知道我们的Service确实在给用户带来价值。所以当Service没有给用户带来实际作用的时候，我们就应该停止Service。<br>所以当我们运行一个Service的时候，实际上我们在告诉Android系统当这个Service正在给用户带来价值的时候（后台数据下载，音乐播放等等），用户认为我们的进程比其他在竞争系统资源的线程更重要，所以用户希望系统要强关线程的时候关其他的而不是我们的。但是问题来了，当很多Service都霸占着线程的时候，就会影响系统的多任务，因为越多这种系统不该杀的线程存在，越多普通线程就容易被干掉。用户就会感觉到有些没用过多久的应用怎么就被系统干掉了，比如新闻类应用，本来缓存在一个新闻页然后切出去看了会微信，结果新闻类应用被干掉了，重新进来之后又得重新从首页导航加载。尤其是当应用本身没有处理好被系统强杀线程时候的操作（比如没有处理onSaveInstanceState()）。<br>这个问题的关键在于开发者没有以用户的角度来考虑，而是以他们自己的角度考虑。认为对他们重要的东西就也会对用户重要，实际上有的时候正好相反。开发者想早点干完活回家而不是清理蛋疼的Service代码，但是用户想要的是多任务运行顺利。<br>所以，再强调一遍，只有真正在给用户带来价值的时候才需要用Service。<br>在这里“价值”其实不太好定义，就像“美丽”一样，是比较主观的东西。而且用户才是那个最终使用的人，所以用户才应该是来定义这个“价值”的人。所以必须让用户感觉到你的Service带来的价值足够大，以至于可以接受多任务系统运行差一点。比如用户会到愤怒的小鸟页面的时候得从头开始，而不是回到保存的地方，因为Android因为用户接电话而内存不够，终止了小鸟的线程而不是你的线程。<br>“正在带来价值”指的事Service“此刻”正在带来价值，而不是“几分钟之内”这种模糊的概念，也不是“某时刻”。就是此刻。而且这个价值的接受者必须是用户。<br>这里就来举几个例子：<br>音乐播放应用正在播放音乐是一种正在传递价值给用户。如果该进程被杀，用户会立刻察觉到音乐停止，所以这种情况下是应该使用Service的。实际使用中，这种情况甚至还一般会加上startForeground()来更加提升进程的优先级。<br>让Service开着来保持线程中的数据而不是在重入时重新加载数据，这种情况就没有实际给用户带来价值。你的线程不会永远运行，所以更应该处理好线程重启和数据重载。对用户来说有用的数据被加载进来，但是并不需要一个长时间运行的Service。<br>用Service来下载大文件是在实时给用户带来价值。这个例子非常适合使用IntentService，因为你不仅需要Service，还需要一个后台线程来做网络和磁盘IO操作，并且下载完成之后Service会自己关掉。这样就可以保证Service对用户有用的时候运行，没用的时候就停止。<br>用Service来做定时性的工作基本上没有给用户实时带来价值。虽然定时性工作对用户有价值，但是看着定时器到达那个时间点的过程并没有什么意义。这种情况下更应该用AlarmManager，或者Android5.0新引进的JobScheduler。<br>用Service来获取一个应用的总体控制，这个也没有给用户带来什么实时的价值。这种情况更适合用一个轻量级的单例。<br>你觉得好像需要一个Service，但都还没有想好什么时候应该停止Service，就这么让它运行了。。这个更没有给用户带来任何价值。不要看心情来决定是不是要Service，而是确实在给用户带来价值。<br>一般以下几种情况我们会考虑用相应的Android组件。<br>· 当你想在屏幕上显示一些东西的时候用Activity。<br>· 当你想跟其他应用分享数据的时候用Content Provider。<br>· 当你要回应一个第三方广播的时候用Broadcast Receiver。<br>而Service是一个类似“瑞士军刀”一样的存在，可以用在很多的场景中。所以有的时候很难判断是不是要用Service。如果你的Service没有保持线程优先级的作用，使用Service本身就会是个很麻烦的问题。Service是会影响用户体验的，所以开发者一定要想清楚为什么要用Service，什么时候开始运行，什么时候停止运行。<br>所以还是回到最简单的那句话：只有在此刻正在给用户带来价值的情况要用Service。</p>
+</span>
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+  </section>
 
   
+ </div>
 
-        </div>
+        
 
         
       </div>
-
 
       
   
@@ -242,40 +348,40 @@
     </div>
   </div>
 
-  <div id="sidebar" class="sidebar">
+  <aside id="sidebar" class="sidebar">
     <div class="sidebar-inner">
 
       
 
-      <div class="site-overview">
-        <div class="site-author motion-element">
-          <img class="site-author-image" src="/images/default_avatar.jpg" alt="Deng Nan" />
-          <p class="site-author-name">Deng Nan</p>
+      <section class="site-overview">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" src="/images/default_avatar.jpg" alt="Deng Nan" itemprop="image"/>
+          <p class="site-author-name" itemprop="name">Deng Nan</p>
         </div>
-        <p class="site-description motion-element"></p>
-        <div class="site-state motion-element">
+        <p class="site-description motion-element" itemprop="description"></p>
+        <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">1</span>
-              <span class="site-state-item-name">文章</span>
+              <span class="site-state-item-count">2</span>
+              <span class="site-state-item-name">posts</span>
             </a>
           </div>
 
           <div class="site-state-item site-state-categories">
             
-              <span class="site-state-item-count">1</span>
-              <span class="site-state-item-name">分類</span>
+              <span class="site-state-item-count">2</span>
+              <span class="site-state-item-name">categories</span>
               
           </div>
 
           <div class="site-state-item site-state-tags">
             <a href="/tags">
-              <span class="site-state-item-count">3</span>
-              <span class="site-state-item-name">標籤</span>
+              <span class="site-state-item-count">4</span>
+              <span class="site-state-item-name">tags</span>
               </a>
           </div>
 
-        </div>
+        </nav>
 
         
 
@@ -289,44 +395,42 @@
         <div class="links-of-author motion-element">
           
         </div>
-        
-      </div>
+
+      </section>
 
       
 
     </div>
-  </div>
+  </aside>
 
 
-    </div>
+    </main>
 
-    <div id="footer" class="footer">
-      <div class="footer-inner">
-        <div class="copyright">
+    <footer id="footer" class="footer">
+      <div class="footer-inner"> <div class="copyright" >
   
   &copy; &nbsp; 
-  2015
+  <span itemprop="copyrightYear">2015</span>
   <span class="with-love">
-    <i class="icon-heart"></i>
+    <i class="icon-next-heart"></i>
   </span>
-  <span class="author">Deng Nan</span>
+  <span class="author" itemprop="copyrightHolder">Deng Nan</span>
 </div>
 
 <div class="powered-by">
-  由 <a class="theme-link" href="http://hexo.io">Hexo</a> 強力驅動
+  Powered by <a class="theme-link" href="http://hexo.io">Hexo</a>
 </div>
 
 <div class="theme-info">
-  主題 -
+  Theme -
   <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
     NexT
   </a>
 </div>
 
 
-
-      </div>
-    </div>
+ </div>
+    </footer>
 
     <div class="back-to-top"></div>
   </div>
@@ -335,38 +439,8 @@
 
   
   
-
   
-  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js"></script>
-  <script type="text/javascript" src="/js/fancy-box.js?v=0.4.3"></script>
-
-
-  <script type="text/javascript" src="/js/helpers.js?v=0.4.3"></script>
-  
-
-  <script type="text/javascript" src="/vendors/velocity/velocity.min.js"></script>
-  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js"></script>
-
-  <script type="text/javascript" src="/js/motion_global.js?v=0.4.3" id="motion.global"></script>
-
-
-
-  <script type="text/javascript" src="/js/search-toggle.js"></script>
-
-  
-
-  <script type="text/javascript">
-    $(document).ready(function () {
-      if (CONFIG.sidebar === 'always') {
-        displaySidebar();
-      }
-    });
-  </script>
-
-  
-
-  
-  
+    
 
   
     
@@ -383,23 +457,57 @@
       || document.getElementsByTagName('body')[0]).appendChild(ds);
     })();
   </script>
+    
+     
+
+    
+  
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js"></script>
+  <script type="text/javascript" src="/js/fancy-box.js?v=0.4.5.1"></script>
+
+
+  <script type="text/javascript" src="/js/helpers.js?v=0.4.5.1"></script>
+  
+
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js"></script>
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js"></script>
+
+  <script type="text/javascript" src="/js/motion_global.js?v=0.4.5.1" id="motion.global"></script>
+
+
+
+
+  <script type="text/javascript" src="/js/nav-toggle.js?v=0.4.5.1"></script>
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
 
   
 
+  <script type="text/javascript">
+    $(document).ready(function () {
+      if (CONFIG.sidebar === 'always') {
+        displaySidebar();
+      }
+      if (isMobile()) {
+        FastClick.attach(document.body);
+      }
+    });
+  </script>
+
+  
 
   
   
 
   
-  <!-- lazyload -->
   <script type="text/javascript" src="/js/lazyload.js"></script>
-      <script type="text/javascript">
-        jQuery(function() {          
-            jQuery("#posts img").lazyload({
-              placeholder:"http://www.arao.me/loading.gif",  
-                effect:"fadeIn"
-              });
-            });
-    </script>   
+  <script type="text/javascript">
+    $(function () {
+      $("#posts").find('img').lazyload({
+        placeholder: "/images/loading.gif",
+        effect: "fadeIn"
+      });
+    });
+  </script>
 </body>
 </html>

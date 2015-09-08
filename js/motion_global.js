@@ -28,14 +28,13 @@ $(document).ready(function () {
   sidebarToggleMotion();
   postsListMotion();
   backToTopMotion();
-  searchMotion();
 
   //add motion effect to toc
   $('.sidebar-nav-toc') && $('.post-toc-wrap').addClass('motion-element');
 
 
   //当前选择的是目录列表时添加 class 'motion-element'
-  sidebar.bind('click', function(e){ 
+  sidebar.bind('click', function(e){
     if(!!$('.sidebar-nav-toc') && e.target == $('.sidebar-nav-toc')[0]){
       $('.post-toc-wrap').addClass('motion-element');
     }});
@@ -55,7 +54,7 @@ $(document).ready(function () {
         SIDEBAR_DISPLAY_DURATION
       );
       // sidebar 内容的效果应该在sidebarsidebarShowMotion内触发
-      // sidebarContentMotion(); 
+      // sidebarContentMotion();
     })
     .on('sidebar.isHiding', function () {});
 
@@ -134,9 +133,14 @@ $(document).ready(function () {
   }
 
   function sidebarContentMotion () {
-    $('.sidebar .motion-element').velocity(
-      'transition.slideRightIn',
-      {stagger: 50, drag: true}
+    $('.sidebar .motion-element')
+      .velocity('transition.slideRightIn',{
+        stagger: 50,
+        drag: true,
+        complete: function () {
+          sidebar.trigger('sidebar.motion.complete');
+        }
+      }
     );
   }
 
@@ -162,20 +166,5 @@ $(document).ready(function () {
       sidebarToggleLine2nd.velocity('stop').velocity(sidebarToggleLine2ndStatusInit);
       sidebarToggleLine3rd.velocity('stop').velocity(sidebarToggleLine3rdStatusInit);
     });
-  }
-
-  function searchMotion () {
-    var $searchForm = $('.site-search form');
-    var $searchToggle = $('.site-search-toggle');
-
-    if (isDesktop()) {
-      $searchToggle.on('click', function () {
-        $searchForm.velocity('stop').velocity({ top: 0 });
-      });
-
-      $(document).on('click', function (event) {
-        !$(event.target).closest('.site-search').length && $searchForm.velocity('stop').velocity({ top: -50 });
-      });
-    }
   }
 });
