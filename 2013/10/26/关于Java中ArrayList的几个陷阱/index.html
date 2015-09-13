@@ -30,7 +30,7 @@
 
 
 
-  <meta name="keywords" content="Brillo,Google IO2015,IOT," />
+  <meta name="keywords" content="Java," />
 
 
 
@@ -39,19 +39,31 @@
   <link rel="shorticon icon" type="image/x-icon" href="/favicon.ico?v=0.4.5.1" />
 
 
-<meta name="description" content="Brillo是Google打算进军智能硬件和家庭自动化的棋子。Google主要是从Nest的团队中和Android的团队中组了一个新团队，来进行Brillo的研发。Brillo可以被看做是一个主要为了小型嵌入式设备而做的Android系统，比如各种家电控制器、路由器、传感器控制器等等。
-而Weave是一种智能硬件的通信语言，它本来的字面意思是编织，很明显，Google想用它来达到万物相连像织布一样">
+<meta name="description" content="最近编了一些跟算法有关的东西，碰到了几个很奇怪的问题。找了一些资料和研究了下Java集合类和ArrayList的源码才彻底搞明白。
+
+ArrayList add的时候传进的其实是引用，而并非值的拷。先看一个例子
+
+public static void main(String[] args){
+    ArrayList&amp;lt;ArrayList&amp;lt;String&amp;gt;&amp;gt; result =">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Google_IO2015_Brillo_Weave">
-<meta property="og:url" content="http://yoursite.com/2015/06/01/Google-IO2015-Brillo-Weave/index.html">
+<meta property="og:title" content="关于Java中ArrayList的几个陷阱">
+<meta property="og:url" content="http://yoursite.com/2013/10/26/关于Java中ArrayList的几个陷阱/index.html">
 <meta property="og:site_name" content="dengn's blog">
-<meta property="og:description" content="Brillo是Google打算进军智能硬件和家庭自动化的棋子。Google主要是从Nest的团队中和Android的团队中组了一个新团队，来进行Brillo的研发。Brillo可以被看做是一个主要为了小型嵌入式设备而做的Android系统，比如各种家电控制器、路由器、传感器控制器等等。
-而Weave是一种智能硬件的通信语言，它本来的字面意思是编织，很明显，Google想用它来达到万物相连像织布一样">
-<meta property="og:updated_time" content="2015-09-13T09:16:51.397Z">
+<meta property="og:description" content="最近编了一些跟算法有关的东西，碰到了几个很奇怪的问题。找了一些资料和研究了下Java集合类和ArrayList的源码才彻底搞明白。
+
+ArrayList add的时候传进的其实是引用，而并非值的拷。先看一个例子
+
+public static void main(String[] args){
+    ArrayList&amp;lt;ArrayList&amp;lt;String&amp;gt;&amp;gt; result =">
+<meta property="og:updated_time" content="2015-09-13T19:45:25.137Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Google_IO2015_Brillo_Weave">
-<meta name="twitter:description" content="Brillo是Google打算进军智能硬件和家庭自动化的棋子。Google主要是从Nest的团队中和Android的团队中组了一个新团队，来进行Brillo的研发。Brillo可以被看做是一个主要为了小型嵌入式设备而做的Android系统，比如各种家电控制器、路由器、传感器控制器等等。
-而Weave是一种智能硬件的通信语言，它本来的字面意思是编织，很明显，Google想用它来达到万物相连像织布一样">
+<meta name="twitter:title" content="关于Java中ArrayList的几个陷阱">
+<meta name="twitter:description" content="最近编了一些跟算法有关的东西，碰到了几个很奇怪的问题。找了一些资料和研究了下Java集合类和ArrayList的源码才彻底搞明白。
+
+ArrayList add的时候传进的其实是引用，而并非值的拷。先看一个例子
+
+public static void main(String[] args){
+    ArrayList&amp;lt;ArrayList&amp;lt;String&amp;gt;&amp;gt; result =">
 
 
 <script type="text/javascript" id="hexo.configuration">
@@ -61,7 +73,7 @@
   };
 </script>
 
-  <title> Google_IO2015_Brillo_Weave | dengn's blog </title>
+  <title> 关于Java中ArrayList的几个陷阱 | dengn's blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="default">
@@ -168,7 +180,7 @@
           
           
             
-              Google_IO2015_Brillo_Weave
+              关于Java中ArrayList的几个陷阱
             
           
         </h1>
@@ -177,8 +189,8 @@
       <div class="post-meta">
         <span class="post-time">
           Posted on
-          <time itemprop="dateCreated" datetime="2015-06-01T11:33:06+02:00" content="2015-06-01">
-            2015-06-01
+          <time itemprop="dateCreated" datetime="2013-10-26T20:38:23+02:00" content="2013-10-26">
+            2013-10-26
           </time>
         </span>
 
@@ -187,8 +199,8 @@
             &nbsp; | &nbsp; In
             
               <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                <a href="/categories/业内动态/" itemprop="url" rel="index">
-                  <span itemprop="name">业内动态</span>
+                <a href="/categories/Java/" itemprop="url" rel="index">
+                  <span itemprop="name">Java</span>
                 </a>
               </span>
 
@@ -203,8 +215,8 @@
           
             <span class="post-comments-count">
               &nbsp; | &nbsp;
-              <a href="/2015/06/01/Google-IO2015-Brillo-Weave/#comments" itemprop="discussionUrl">
-                <span class="post-comments-count ds-thread-count" data-thread-key="2015/06/01/Google-IO2015-Brillo-Weave/" itemprop="commentsCount"></span>
+              <a href="/2013/10/26/关于Java中ArrayList的几个陷阱/#comments" itemprop="discussionUrl">
+                <span class="post-comments-count ds-thread-count" data-thread-key="2013/10/26/关于Java中ArrayList的几个陷阱/" itemprop="commentsCount"></span>
               </a>
             </span>
           
@@ -218,13 +230,73 @@
       
 
       
-        <span itemprop="articleBody"><p>Brillo是Google打算进军智能硬件和家庭自动化的棋子。Google主要是从Nest的团队中和Android的团队中组了一个新团队，来进行Brillo的研发。Brillo可以被看做是一个主要为了小型嵌入式设备而做的Android系统，比如各种家电控制器、路由器、传感器控制器等等。</p>
-<p>而Weave是一种智能硬件的通信语言，它本来的字面意思是编织，很明显，Google想用它来达到万物相连像织布一样的效果。</p>
-<p>目前IOT行业有几个大问题。第一是缺乏标准，不仅是大公司都想着推出自己的标准来垄断市场，小公司也都按照自己的想法来实现产品，这样出的问题就是大家的产品都只能在自家的阵营里玩。出了这个圈子，就没法跟其他产品兼容。标准化的工作一般动辄都是以十数年的工作才能完成，不仅仅是技术问题，也是各种商业利益博弈。而Google和Apple这类巨头，都试图主导行业的标准化，这样就可以保持行业的领先地位。第二个是目前的IOT和智能家居还是离大众化太远了，缺少真正强大的市场需求，目前技术所能做到的仍然大部分只是用户对家电设备进行最基本的操控，比如开关，调节之类，还只能算是半需求半卖概念的状态。</p>
-<p>Google推出Brillo和Weave的目的就在于试图统一IOT行业的底层，让创业公司专心去发掘终端应用。一方面操作系统的统一可以让各硬件和OEM厂商可以像现在的Android一样大量出货降低成本，另一方面软件上基于Json的Weave本身就具备了完美支持手机应用和Web的属性。这样可以避免类似于Phillips Hue里面的Hub那样的中间件，直接可以与手机通信。</p>
-<p>相比苹果前不久推出的Homekit来说，Google的Brillo算是IOT行业第一个大佬级操作系统，也意在迅速占领这块苹果还没有染指的领域。而Weave可以看做是Google版的Homekit。</p>
-<p>不过到年底之前，Brillo和Weave还不会有任何面向开发者或者用户的实际产品或者demo。所以估计起码得到2016年才会出来Brillo的第一批产品，不过也有开发者猜想，Nest产品的下一个版本可能就会装上这两样新技术。毕竟Google花大价钱收购的Nest可以很好的作为IOT行业的踏脚板。</p>
-</span>
+        <span itemprop="articleBody"><p> 最近编了一些跟算法有关的东西，碰到了几个很奇怪的问题。找了一些资料和研究了下Java集合类和ArrayList的源码才彻底搞明白。</p>
+<ul>
+<li>ArrayList add的时候传进的其实是引用，而并非值的拷。先看一个例子</li>
+</ul>
+<pre><code>public <span class="keyword">static</span> <span class="type">void</span> main(<span class="type">String</span>[] args){
+    <span class="type">ArrayList</span>&lt;<span class="type">ArrayList</span>&lt;<span class="type">String</span>&gt;&gt; <span class="literal">result</span> = new <span class="type">ArrayList</span>&lt;<span class="type">ArrayList</span>&lt;<span class="type">String</span>&gt;&gt;();
+    <span class="type">ArrayList</span>&lt;<span class="type">String</span>&gt; values = new <span class="type">ArrayList</span>&lt;<span class="type">String</span>&gt;();
+
+    values.add(<span class="string">"a"</span>);
+    values.add(<span class="string">"b"</span>);
+    values.add(<span class="string">"c"</span>);
+    <span class="literal">result</span>.add(values);
+    values.clear();
+    values.add(<span class="string">"d"</span>);
+    values.add(<span class="string">"e"</span>);
+    values.add(<span class="string">"f"</span>);
+    <span class="literal">result</span>.add(values);
+
+    <span class="type">System</span>.<span class="keyword">out</span>.println(<span class="literal">result</span>.toString());
+}
+</code></pre><p> 输出结果是：[[d, e, f], [d, e, f]]。而不是我们想的按照字面上的意思输出[[a, b, c], [d, e, f]]。<br> 因为实际上在result.add(values)的时候传的是values这个list的引用，而不是整个list的拷贝。这样就导致其实下面在对values做处理的时候，已经加进result里的values也在跟着变化。<br> 所以为了避免出现这种问题，改写成下面这样会让避免出现这个问题。</p>
+<pre><code>public <span class="keyword">static</span> <span class="type">void</span> main(<span class="type">String</span>[] args){
+    <span class="type">ArrayList</span>&lt;<span class="type">ArrayList</span>&lt;<span class="type">String</span>&gt;&gt; <span class="literal">result</span> = new <span class="type">ArrayList</span>&lt;<span class="type">ArrayList</span>&lt;<span class="type">String</span>&gt;&gt;();
+    <span class="type">ArrayList</span>&lt;<span class="type">String</span>&gt; values = new <span class="type">ArrayList</span>&lt;<span class="type">String</span>&gt;();
+
+    values.add(<span class="string">"a"</span>);
+    values.add(<span class="string">"b"</span>);
+    values.add(<span class="string">"c"</span>);
+    <span class="literal">result</span>.add(values);
+    values = new <span class="type">ArrayList</span>&lt;<span class="type">String</span>&gt;();
+    values.add(<span class="string">"d"</span>);
+    values.add(<span class="string">"e"</span>);
+    values.add(<span class="string">"f"</span>);
+    <span class="literal">result</span>.add(values);
+
+    <span class="type">System</span>.<span class="keyword">out</span>.println(<span class="literal">result</span>.toString());
+}
+</code></pre><ul>
+<li>ArrayList在循环的时候删除元素。</li>
+</ul>
+<pre><code><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> main(<span class="keyword">String</span>[] args){
+
+    ArrayList&lt;<span class="keyword">String</span>&gt; values = <span class="keyword">new</span> ArrayList&lt;<span class="keyword">String</span>&gt;();
+    values.<span class="built_in">add</span>(<span class="string">"0"</span>);
+    values.<span class="built_in">add</span>(<span class="string">"1"</span>);
+    values.<span class="built_in">add</span>(<span class="string">"2"</span>);
+    values.<span class="built_in">add</span>(<span class="string">"3"</span>);
+    values.<span class="built_in">add</span>(<span class="string">"4"</span>);
+
+    <span class="keyword">for</span>(<span class="built_in">int</span> i=<span class="number">0</span>;i&lt;values.<span class="built_in">size</span>();i++){
+        values.remove(i);
+    }
+    System.out.<span class="built_in">println</span>(values.toString());
+}
+</code></pre><p> 结果为: [1, 3]。这是因为在删除操作之后，整个list的index本身就也产生了变化，所以继续做删除的时候就已经不是一开始那个list的index，这样就产生了错误的结果。<br> 要是写成这样呢？</p>
+<pre><code><span class="type">Iterator</span>&lt;<span class="type">String</span>&gt; <span class="keyword">iterator</span> = values.<span class="keyword">iterator</span>();
+<span class="keyword">while</span>(<span class="keyword">iterator</span>.hasNext()){
+    <span class="type">String</span> element = <span class="keyword">iterator</span>.next();
+    values.remove(element);
+}
+</code></pre><p> 结果出现了ConcurrentModificationException，其实这是因为在Iterator做任何操作的时候都会做checkForComodification，其实就是检查是否list长度有改动，如果有改动并且没有通知到iterator进行更新，就会抛出ConcurrentModificationException。<br> 正确的写法是使用Iterator本身提供的remove方法，这样的话每次删除元素更新的列表长度都会被Iterator记录下来，并始终保持一致，这样就不会再出现ConcurrentModificationException。</p>
+<pre><code> <span class="type">Iterator</span>&lt;<span class="type">String</span>&gt; <span class="keyword">iterator</span> = values.<span class="keyword">iterator</span>();
+<span class="keyword">while</span>(<span class="keyword">iterator</span>.hasNext()){
+    <span class="keyword">iterator</span>.next();
+    <span class="keyword">iterator</span>.remove();
+}
+</code></pre></span>
       
     </div>
 
@@ -232,11 +304,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Brillo/" rel="tag">#Brillo</a>
-          
-            <a href="/tags/Google-IO2015/" rel="tag">#Google IO2015</a>
-          
-            <a href="/tags/IOT/" rel="tag">#IOT</a>
+            <a href="/tags/Java/" rel="tag">#Java</a>
           
         </div>
       
@@ -245,11 +313,13 @@
         <div class="post-nav">
           <div class="post-nav-prev post-nav-item">
             
+              <a href="/2015/01/08/Service的角色/" rel="prev">Service的角色</a>
+            
           </div>
 
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2015/01/08/Service的角色/" rel="next">Service的角色</a>
+              <a href="/2013/08/07/SLIP协议/" rel="next">SLIP协议</a>
             
           </div>
         </div>
@@ -274,8 +344,8 @@
         
           <div class="comments" id="comments">
             
-              <div class="ds-thread" data-thread-key="2015/06/01/Google-IO2015-Brillo-Weave/"
-                   data-title="Google_IO2015_Brillo_Weave" data-url="http://yoursite.com/2015/06/01/Google-IO2015-Brillo-Weave/">
+              <div class="ds-thread" data-thread-key="2013/10/26/关于Java中ArrayList的几个陷阱/"
+                   data-title="关于Java中ArrayList的几个陷阱" data-url="http://yoursite.com/2013/10/26/关于Java中ArrayList的几个陷阱/">
               </div>
             
           </div>
