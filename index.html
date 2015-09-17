@@ -255,7 +255,7 @@
           
           
             
-              <a class="post-title-link" href="/2015/01/08/Service的角色/" itemprop="url">
+              <a class="post-title-link" href="/2015/01/08/ServiceÁ─¢Ã╔½/" itemprop="url">
                 Service的角色
               </a>
             
@@ -292,8 +292,8 @@
           
             <span class="post-comments-count">
               &nbsp; | &nbsp;
-              <a href="/2015/01/08/Service的角色/#comments" itemprop="discussionUrl">
-                <span class="post-comments-count ds-thread-count" data-thread-key="2015/01/08/Service的角色/" itemprop="commentsCount"></span>
+              <a href="/2015/01/08/ServiceÁ─¢Ã╔½/#comments" itemprop="discussionUrl">
+                <span class="post-comments-count ds-thread-count" data-thread-key="2015/01/08/ServiceÁ─¢Ã╔½/" itemprop="commentsCount"></span>
               </a>
             </span>
           
@@ -340,7 +340,7 @@
           
           
             
-              <a class="post-title-link" href="/2013/10/26/关于Java中ArrayList的几个陷阱/" itemprop="url">
+              <a class="post-title-link" href="/2013/10/26/╣ÏË┌JavaÍðArrayListÁ─╝©©÷¤¦┌Õ/" itemprop="url">
                 关于Java中ArrayList的几个陷阱
               </a>
             
@@ -377,8 +377,8 @@
           
             <span class="post-comments-count">
               &nbsp; | &nbsp;
-              <a href="/2013/10/26/关于Java中ArrayList的几个陷阱/#comments" itemprop="discussionUrl">
-                <span class="post-comments-count ds-thread-count" data-thread-key="2013/10/26/关于Java中ArrayList的几个陷阱/" itemprop="commentsCount"></span>
+              <a href="/2013/10/26/╣ÏË┌JavaÍðArrayListÁ─╝©©÷¤¦┌Õ/#comments" itemprop="discussionUrl">
+                <span class="post-comments-count ds-thread-count" data-thread-key="2013/10/26/╣ÏË┌JavaÍðArrayListÁ─╝©©÷¤¦┌Õ/" itemprop="commentsCount"></span>
               </a>
             </span>
           
@@ -489,7 +489,7 @@
           
           
             
-              <a class="post-title-link" href="/2013/08/07/SLIP协议/" itemprop="url">
+              <a class="post-title-link" href="/2013/08/07/SLIPð¡ÊÚ/" itemprop="url">
                 SLIP协议
               </a>
             
@@ -526,8 +526,8 @@
           
             <span class="post-comments-count">
               &nbsp; | &nbsp;
-              <a href="/2013/08/07/SLIP协议/#comments" itemprop="discussionUrl">
-                <span class="post-comments-count ds-thread-count" data-thread-key="2013/08/07/SLIP协议/" itemprop="commentsCount"></span>
+              <a href="/2013/08/07/SLIPð¡ÊÚ/#comments" itemprop="discussionUrl">
+                <span class="post-comments-count ds-thread-count" data-thread-key="2013/08/07/SLIPð¡ÊÚ/" itemprop="commentsCount"></span>
               </a>
             </span>
           
@@ -646,6 +646,98 @@
 
 
     
+      
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      
+      
+        <h1 class="post-title" itemprop="name headline">
+          
+          
+            
+              <a class="post-title-link" href="/2013/02/17/Android-WiFi调试/" itemprop="url">
+                Android WiFi调试
+              </a>
+            
+          
+        </h1>
+      
+
+      <div class="post-meta">
+        <span class="post-time">
+          Posted on
+          <time itemprop="dateCreated" datetime="2013-02-17T20:35:43+01:00" content="2013-02-17">
+            2013-02-17
+          </time>
+        </span>
+
+        
+          <span class="post-category" >
+            &nbsp; | &nbsp; In
+            
+              <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                <a href="/categories/Android/" itemprop="url" rel="index">
+                  <span itemprop="name">Android</span>
+                </a>
+              </span>
+
+              
+              
+
+            
+          </span>
+        
+
+        
+          
+            <span class="post-comments-count">
+              &nbsp; | &nbsp;
+              <a href="/2013/02/17/Android-WiFi调试/#comments" itemprop="discussionUrl">
+                <span class="post-comments-count ds-thread-count" data-thread-key="2013/02/17/Android-WiFi调试/" itemprop="commentsCount"></span>
+              </a>
+            </span>
+          
+        
+      </div>
+    </header>
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <span itemprop="articleBody"><p> 有的时候调试Android的程序，不方便一直插着USB线调试，其实Android还提供一种基于wifi的调试方法。</p>
+<p> 首先先保证Adroid手机和电脑在同一个WiFi局域网内，不然基于WiFi调试的前提都没有达到。然后手机的USB debug模式要已经打开。</p>
+<p> 然后Android手机还是用USB插在电脑上，打开一个命令行，找到Android SDK文件夹里面的platform-tools里的adb.exe，先执行adb devices看手机是否连上了adb。</p>
+<p> <img src="/img/1.png" alt=""></p>
+<p> 然后执行adb tcpip 5555。这样就打开了手机上的5555端口用来发送手机的log。</p>
+<p> <img src="/img/2.png" alt=""></p>
+<p> Android手机已经和PC在同一个局域网中了，找到Android里的WiFi设置-高级里面，可以看到当前IP地址。</p>
+<p> 最后在PC的命令行里执行adb connect 192.168.1.XXX(Android的IP地址)。就可以看到手机和adb通过WiFi连在了一起，这个时候即使拔掉USB，在eclipse上也还是可以看到logcat在继续输出Android上的信息。</p>
+<p> <img src="/img/3.png" alt=""></p>
+</span>
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
   </section>
 
   
@@ -680,7 +772,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">4</span>
+              <span class="site-state-item-count">5</span>
               <span class="site-state-item-name">posts</span>
             </a>
           </div>
